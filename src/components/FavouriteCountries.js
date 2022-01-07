@@ -1,13 +1,12 @@
 const FavouriteCountries = ({favouriteCountries}) => {
-    const favourites = () => {
-        return favouriteCountries.map((country) => {
+    const favourites = favouriteCountries.map((country) => {
             return <li>{country.name}</li>
         })
-    }
+    
     
     return (
         <ul>
-            {favourites()}
+            {favourites}
         </ul>
     )
 }
