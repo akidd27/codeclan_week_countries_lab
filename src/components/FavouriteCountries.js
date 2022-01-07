@@ -1,8 +1,10 @@
 const FavouriteCountries = ({favouriteCountries}) => {
-    const favourites = favouriteCountries.map((country) => {
-            return <li>{country.name}</li>
+
+    const favourites = favouriteCountries.map((country, index) => {
+            return (
+                <li key={index}>{country.name.common}</li>
+            )
         })
-    
     
     return (
         <ul>

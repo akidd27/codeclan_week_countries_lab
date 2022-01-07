@@ -33,20 +33,16 @@ const CountryContainer = () => {
     }
 
     const addToFavourites = (selectedCountry) => {
-        const newFavouriteCountries = favouriteCountries + selectedCountry;
+        const newFavouriteCountries = [...favouriteCountries, selectedCountry];
         setFavouriteCountries(newFavouriteCountries);
     }
 
-    
-
-    
-    
     return(
         <>
         <p>Global Population: {getTotalPopulation()}</p>
         <CountrySelector countries={countries} onCountrySelected={onCountrySelected}/>
         {selectedCountry ? <CountryDetail selectedCountry={selectedCountry} addToFavourites={addToFavourites} /> : null}
-        <FavouriteCountries favouriteCountries={favouriteCountries}/>
+        {favouriteCountries && <FavouriteCountries favouriteCountries={favouriteCountries}/>}
         </>
     );
     
