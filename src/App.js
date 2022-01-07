@@ -6,7 +6,7 @@ function App() {
     <>
       <h1>Countries App</h1>
       <CountryContainer/>
-      
+
       <h2>Total population:</h2>
     </>
   );
